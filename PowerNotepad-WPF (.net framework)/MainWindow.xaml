@@ -25,7 +25,7 @@
                                 <StackPanel>
                                     <TextBlock Padding="16" Text="Welcome!" FontWeight="SemiBold" FontSize="36"/>
                                     <TextBlock Padding="16" Text="Create" FontWeight="SemiBold" FontSize="16"/>
-                                    <Fluent:Button Header="New spreadsheet" Icon="add.png"/>
+                                    <Fluent:Button Header="New file" Icon="add.png"/>
                                 </StackPanel>
                             </Fluent:StartScreenTabControl.RightContent>
                         </Fluent:StartScreenTabControl>
