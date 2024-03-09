@@ -71,6 +71,7 @@ namespace PowerNotepad_WPF__.net_framework_
             string extendedUserName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
             string userName = Environment.UserName;
             user.Text = userName;
+            isDebug = false;
         }
 
         private void About(object sender, RoutedEventArgs e)
