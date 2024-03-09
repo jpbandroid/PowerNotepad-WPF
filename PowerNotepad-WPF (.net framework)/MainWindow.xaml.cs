@@ -15,6 +15,8 @@ using System.Windows.Shapes;
 using Fluent;
 using ScintillaNET.WPF;
 using ScintillaNET;
+using Microsoft.Win32;
+using System.IO;
 
 namespace PowerNotepad_WPF__.net_framework_
 {
@@ -71,14 +73,14 @@ namespace PowerNotepad_WPF__.net_framework_
 
         }
 
-        private void Open(object sender, RoutedEventArgs e)
+        private void OpenClick(object sender, RoutedEventArgs e)
         {
-
+            Open();
         }
 
-        private void Save(object sender, RoutedEventArgs e)
+        private void SaveClick(object sender, RoutedEventArgs e)
         {
-
+            Save();
         }
 
         private void showinsiderinfo(object sender, RoutedEventArgs e)
@@ -114,6 +116,70 @@ namespace PowerNotepad_WPF__.net_framework_
         public static System.Drawing.Color IntToColor(int rgb)
         {
             return System.Drawing.Color.FromArgb(255, (byte)(rgb >> 16), (byte)(rgb >> 8), (byte)rgb);
+        }
+
+        public bool Save()
+        {
+            if (String.IsNullOrEmpty(_filePath))
+                return SaveAs();
+
+            return Save(_filePath);
+        }
+
+        private void Open()
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            bool? res = openFileDialog.ShowDialog();
+            if (res == null || !(bool)res)
+                return;
+            _filePath = openFileDialog.FileName;
+            OpenFile(_filePath);
+        }
+
+        private void OpenFile(string filePath)
+        {
+            scintillatext.Text = File.ReadAllText(filePath);
+            //doc.Scintilla.UndoRedo.EmptyUndoBuffer();
+            //doc.Scintilla.Modified = false;
+            Title = System.IO.Path.GetFileName(filePath);
+            FilePath = filePath;
+            //incrementalSearcher.Scintilla = doc.Scintilla;
+
+            return;
+        }
+
+        public bool Save(string filePath)
+        {
+            using (FileStream fs = File.Create(filePath))
+            {
+                using (BinaryWriter bw = new BinaryWriter(fs))
+                    bw.Write(scintillatext.Text.ToCharArray(), 0, scintillatext.Text.Length - 1); // Omit trailing NULL
+            }
+            this.Title = System.IO.Path.GetFileName(filePath) + " - PowerNotepad";
+
+            scintillatext.SetSavePoint();
+            return true;
+        }
+
+        public bool SaveAs()
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            bool? res = saveFileDialog.ShowDialog();
+            if (res != null && (bool)res)
+            {
+                _filePath = saveFileDialog.FileName;
+                return Save(_filePath);
+            }
+
+            return false;
+        }
+
+        private string _filePath;
+
+        public string FilePath
+        {
+            get { return _filePath; }
+            set { _filePath = value; }
         }
     }
 }

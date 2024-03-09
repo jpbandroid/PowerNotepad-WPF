@@ -4,7 +4,7 @@
                      xmlns:Fluent="urn:fluent-ribbon"
                         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-   xmlns:ui="http://schemas.inkore.net/lib/ui/wpf/modern" xmlns:sn="http://scintillanet.codeplex.com"
+   xmlns:ui="http://schemas.inkore.net/lib/ui/wpf/modern" xmlns:sn="http://scintillanet.codeplex.com" xmlns:my="clr-namespace:Microsoft.Win32;assembly=PresentationFramework"
                      mc:Ignorable="d"
                      Title="PowerNotepad" Height="450" Width="800">
     <Grid>
@@ -661,8 +661,8 @@ That's all there is to it!"/>
                 <!--Tabs-->
                 <Fluent:RibbonTabItem Header="Home">
                     <Fluent:RibbonGroupBox Header="Manage files">
-                        <Fluent:Button Header="Open" Click="Open" LargeIcon="open.png"/>
-                        <Fluent:Button Header="Save"  Click="Save" LargeIcon="save.png"/>
+                        <Fluent:Button Header="Open" Click="OpenClick" LargeIcon="open.png"/>
+                        <Fluent:Button Header="Save"  Click="SaveClick" LargeIcon="save.png"/>
                     </Fluent:RibbonGroupBox>
                 </Fluent:RibbonTabItem>
                 <Fluent:RibbonTabItem Header="Help">
@@ -675,6 +675,7 @@ That's all there is to it!"/>
 
 
         <sn:ScintillaWPF Name="scintillatext" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="2"/>
+
 
     </Grid>
 </Fluent:RibbonWindow>
