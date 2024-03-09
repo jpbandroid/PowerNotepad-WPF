@@ -17,6 +17,7 @@ using ScintillaNET.WPF;
 using ScintillaNET;
 using Microsoft.Win32;
 using System.IO;
+using AutoUpdaterDotNET;
 
 namespace PowerNotepad_WPF__.net_framework_
 {
@@ -67,6 +68,9 @@ namespace PowerNotepad_WPF__.net_framework_
             InitializeComponent();
             InitNumberMargin(scintillatext);
             InitSyntaxColoring(scintillatext);
+            string extendedUserName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+            string userName = Environment.UserName;
+            user.Text = userName;
         }
 
         private void About(object sender, RoutedEventArgs e)
@@ -93,7 +97,15 @@ namespace PowerNotepad_WPF__.net_framework_
 
         private void update(object sender, RoutedEventArgs e)
         {
+            if (isDebug == true)
+            {
+                AutoUpdater.Start("https://raw.githubusercontent.com/jpbandroid/jpbOffice-Resources/main/PowerNotepad/updateinfo_debug.xml");
 
+            }
+            else
+            {
+                AutoUpdater.Start("https://raw.githubusercontent.com/jpbandroid/jpbOffice-Resources/main/PowerNotepad/updateinfo.xml");
+            }
         }
 
         private void InitNumberMargin(ScintillaWPF ScintillaNet)
