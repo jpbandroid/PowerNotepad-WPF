@@ -234,6 +234,26 @@ namespace PowerNotepad_WPF__.net_framework_
             ScintillaNet.Styles[ScintillaNET.Style.IndentGuide].ForeColor = IntToColor(FORE_COLOR);
             ScintillaNet.Styles[ScintillaNET.Style.IndentGuide].BackColor = IntToColor(BACK_COLOR);
 
+            // Configure the Python lexer styles
+            ScintillaNet.Styles[ScintillaNET.Style.Python.Identifier].ForeColor = IntToColor(0xD0DAE2);
+            ScintillaNet.Styles[ScintillaNET.Style.Python.CommentBlock].ForeColor = IntToColor(0xBD758B);
+            ScintillaNet.Styles[ScintillaNET.Style.Python.CommentLine].ForeColor = IntToColor(0x40BF57);
+            ScintillaNet.Styles[ScintillaNET.Style.Python.CommentBlock].ForeColor = IntToColor(0x2FAE35);
+            ScintillaNet.Styles[ScintillaNET.Style.Python.Number].ForeColor = IntToColor(0xFFFF00);
+            ScintillaNet.Styles[ScintillaNET.Style.Python.String].ForeColor = IntToColor(0xFFFF00);
+            ScintillaNet.Styles[ScintillaNET.Style.Python.Character].ForeColor = IntToColor(0xE95454);
+            ScintillaNet.Styles[ScintillaNET.Style.Python.Operator].ForeColor = IntToColor(0xE0E0E0);
+            ScintillaNet.Styles[ScintillaNET.Style.Python.Word].ForeColor = IntToColor(0x48A8EE);
+            ScintillaNet.Styles[ScintillaNET.Style.Python.Word2].ForeColor = IntToColor(0xF98906);
+            ScintillaNet.Styles[ScintillaNET.Style.Python.ClassName].ForeColor = IntToColor(0xB3D991);
+            ScintillaNet.Styles[ScintillaNET.Style.Python.Character].ForeColor = IntToColor(0xFF0000);
+            ScintillaNet.Styles[ScintillaNET.Style.Python.Triple].ForeColor = IntToColor(0x48A8EE);
+            ScintillaNet.Styles[ScintillaNET.Style.LineNumber].BackColor = IntToColor(BACK_COLOR);
+            ScintillaNet.Styles[ScintillaNET.Style.LineNumber].ForeColor = IntToColor(FORE_COLOR);
+            ScintillaNet.Styles[ScintillaNET.Style.IndentGuide].ForeColor = IntToColor(FORE_COLOR);
+            ScintillaNet.Styles[ScintillaNET.Style.IndentGuide].BackColor = IntToColor(BACK_COLOR);
+
+
             ScintillaNet.Lexer = Lexer.Cpp;
 
             ScintillaNet.SetKeywords(0, "class extends implements import interface new case do while else if for in switch throw get set function var try catch finally while with default break continue delete return each const namespace package include use is as instanceof typeof author copy default deprecated eventType example exampleText exception haxe inheritDoc internal link mtasc mxmlc param private return see serial serialData serialField since throws usage version langversion playerversion productversion dynamic private public partial static intrinsic internal native override protected AS3 final super this arguments null Infinity NaN undefined true false abstract as base bool break by byte case catch char checked class const continue decimal default delegate do double descending explicit event extern else enum false finally fixed float for foreach from goto group if implicit in int interface internal into is lock long new null namespace object operator out override orderby params private protected public readonly ref return switch struct sbyte sealed short sizeof stackalloc static string select this throw true try typeof uint ulong unchecked unsafe ushort using var virtual volatile void while where yield");
