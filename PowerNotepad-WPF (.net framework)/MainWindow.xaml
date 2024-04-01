@@ -40,7 +40,7 @@
                                         <Image Source="/powernotepad_icon.ico" Height="64" Width="64"/>
                                         <TextBlock VerticalAlignment="Center" Text="PowerNotepad" Foreground="#5C2D91" FontSize="36" FontWeight="SemiBold"/>
                                     </StackPanel>
-                                    <TextBlock Text="PowerNotepad, version 2403 (16.0.14324.20414)"></TextBlock>
+                                    <TextBlock Text="PowerNotepad, version 2404 (16.0.14430.20270)"></TextBlock>
                                     <TextBlock Text="© 2024 ErrorTek/jpbandroid. Licensed under the MIT License."></TextBlock>
                                 </StackPanel>
                             </Fluent:BackstageTabItem>
