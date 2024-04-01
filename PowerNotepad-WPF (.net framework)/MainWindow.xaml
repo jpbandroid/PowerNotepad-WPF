@@ -4,7 +4,7 @@
                      xmlns:Fluent="urn:fluent-ribbon"
                         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-   xmlns:ui="http://schemas.inkore.net/lib/ui/wpf/modern" xmlns:sn="http://scintillanet.codeplex.com" xmlns:my="clr-namespace:Microsoft.Win32;assembly=PresentationFramework"
+   xmlns:ui="http://schemas.inkore.net/lib/ui/wpf/modern" xmlns:sn="http://scintillanet.codeplex.com" xmlns:my="clr-namespace:Microsoft.Win32;assembly=PresentationFramework" xmlns:sn1="https://github.com/fernandreu/ScintillaNET.WPF"
                      mc:Ignorable="d"
                      Title="PowerNotepad" Height="450" Width="800">
     <Grid>
@@ -674,7 +674,7 @@ That's all there is to it!"/>
         </StackPanel>
 
 
-        <sn:ScintillaWPF Name="scintillatext" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="2"/>
+        <sn1:ScintillaWPF Name="scintillatext" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="2"/>
 
 
     </Grid>
