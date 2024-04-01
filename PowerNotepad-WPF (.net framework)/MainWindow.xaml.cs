@@ -35,12 +35,12 @@ namespace PowerNotepad_WPF__.net_framework_
         /// <summary>
         /// the background color of the text area
         /// </summary>
-        private const int BACK_COLOR = 0x2A211C;
+        private const int BACK_COLOR = 0xFFFFFF;
 
         /// <summary>
         /// default text color of the text area
         /// </summary>
-        private const int FORE_COLOR = 0xB7B7B7;
+        private const int FORE_COLOR = 0x000000;
 
         /// <summary>
         /// change this to whatever margin you want the line numbers to show in
@@ -203,9 +203,9 @@ namespace PowerNotepad_WPF__.net_framework_
             // Configure the default style
             ScintillaNet.StyleResetDefault();
             ScintillaNet.Styles[ScintillaNET.Style.Default].Font = "Consolas";
-            ScintillaNet.Styles[ScintillaNET.Style.Default].Size = 10;
-            ScintillaNet.Styles[ScintillaNET.Style.Default].BackColor = IntToColor(0x212121);
-            ScintillaNet.Styles[ScintillaNET.Style.Default].ForeColor = IntToColor(0xFFFFFF);
+            ScintillaNet.Styles[ScintillaNET.Style.Default].Size = 10; 
+            ScintillaNet.StyleClearAll();
+            ScintillaNet.Styles[ScintillaNET.Style.Default].BackColor = System.Drawing.Color.White;
             ScintillaNet.Styles[ScintillaNET.Style.LineNumber].BackColor = IntToColor(BACK_COLOR);
             ScintillaNet.Styles[ScintillaNET.Style.LineNumber].ForeColor = IntToColor(FORE_COLOR);
             ScintillaNet.Styles[ScintillaNET.Style.IndentGuide].ForeColor = IntToColor(FORE_COLOR);
@@ -213,19 +213,22 @@ namespace PowerNotepad_WPF__.net_framework_
             ScintillaNet.StyleClearAll();
 
             // Configure the CPP (C#) lexer styles
-            ScintillaNet.Styles[ScintillaNET.Style.Cpp.Identifier].ForeColor = IntToColor(0xD0DAE2);
-            ScintillaNet.Styles[ScintillaNET.Style.Cpp.Comment].ForeColor = IntToColor(0xBD758B);
-            ScintillaNet.Styles[ScintillaNET.Style.Cpp.CommentLine].ForeColor = IntToColor(0x40BF57);
-            ScintillaNet.Styles[ScintillaNET.Style.Cpp.CommentDoc].ForeColor = IntToColor(0x2FAE35);
-            ScintillaNet.Styles[ScintillaNET.Style.Cpp.Number].ForeColor = IntToColor(0xFFFF00);
-            ScintillaNet.Styles[ScintillaNET.Style.Cpp.String].ForeColor = IntToColor(0xFFFF00);
+
+            ScintillaNet.Styles[ScintillaNET.Style.Default].ForeColor = System.Drawing.Color.Black;
+            ScintillaNet.StyleClearAll();
+            ScintillaNet.Styles[ScintillaNET.Style.Cpp.Identifier].ForeColor = IntToColor(0x000000);
+            ScintillaNet.Styles[ScintillaNET.Style.Cpp.Comment].ForeColor = IntToColor(0x008000);
+            ScintillaNet.Styles[ScintillaNET.Style.Cpp.CommentLine].ForeColor = IntToColor(0x008000);
+            ScintillaNet.Styles[ScintillaNET.Style.Cpp.CommentDoc].ForeColor = IntToColor(0x008000);
+            ScintillaNet.Styles[ScintillaNET.Style.Cpp.Number].ForeColor = IntToColor(0x0000FF);
+            ScintillaNet.Styles[ScintillaNET.Style.Cpp.String].ForeColor = IntToColor(0xA31515);
             ScintillaNet.Styles[ScintillaNET.Style.Cpp.Character].ForeColor = IntToColor(0xE95454);
             ScintillaNet.Styles[ScintillaNET.Style.Cpp.Preprocessor].ForeColor = IntToColor(0x8AAFEE);
             ScintillaNet.Styles[ScintillaNET.Style.Cpp.Operator].ForeColor = IntToColor(0xE0E0E0);
             ScintillaNet.Styles[ScintillaNET.Style.Cpp.Regex].ForeColor = IntToColor(0xff00ff);
-            ScintillaNet.Styles[ScintillaNET.Style.Cpp.CommentLineDoc].ForeColor = IntToColor(0x77A7DB);
-            ScintillaNet.Styles[ScintillaNET.Style.Cpp.Word].ForeColor = IntToColor(0x48A8EE);
-            ScintillaNet.Styles[ScintillaNET.Style.Cpp.Word2].ForeColor = IntToColor(0xF98906);
+            ScintillaNet.Styles[ScintillaNET.Style.Cpp.CommentLineDoc].ForeColor = IntToColor(0x008000);
+            ScintillaNet.Styles[ScintillaNET.Style.Cpp.Word].ForeColor = IntToColor(0x0000FF);
+            ScintillaNet.Styles[ScintillaNET.Style.Cpp.Word2].ForeColor = IntToColor(0x2B91AF);
             ScintillaNet.Styles[ScintillaNET.Style.Cpp.CommentDocKeyword].ForeColor = IntToColor(0xB3D991);
             ScintillaNet.Styles[ScintillaNET.Style.Cpp.CommentDocKeywordError].ForeColor = IntToColor(0xFF0000);
             ScintillaNet.Styles[ScintillaNET.Style.Cpp.GlobalClass].ForeColor = IntToColor(0x48A8EE);
@@ -235,27 +238,26 @@ namespace PowerNotepad_WPF__.net_framework_
             ScintillaNet.Styles[ScintillaNET.Style.IndentGuide].BackColor = IntToColor(BACK_COLOR);
 
             // Configure the Python lexer styles
-            ScintillaNet.Styles[ScintillaNET.Style.Python.Identifier].ForeColor = IntToColor(0xD0DAE2);
-            ScintillaNet.Styles[ScintillaNET.Style.Python.CommentBlock].ForeColor = IntToColor(0xBD758B);
-            ScintillaNet.Styles[ScintillaNET.Style.Python.CommentLine].ForeColor = IntToColor(0x40BF57);
-            ScintillaNet.Styles[ScintillaNET.Style.Python.CommentBlock].ForeColor = IntToColor(0x2FAE35);
-            ScintillaNet.Styles[ScintillaNET.Style.Python.Number].ForeColor = IntToColor(0xFFFF00);
-            ScintillaNet.Styles[ScintillaNET.Style.Python.String].ForeColor = IntToColor(0xFFFF00);
-            ScintillaNet.Styles[ScintillaNET.Style.Python.Character].ForeColor = IntToColor(0xE95454);
-            ScintillaNet.Styles[ScintillaNET.Style.Python.Operator].ForeColor = IntToColor(0xE0E0E0);
-            ScintillaNet.Styles[ScintillaNET.Style.Python.Word].ForeColor = IntToColor(0x48A8EE);
-            ScintillaNet.Styles[ScintillaNET.Style.Python.Word2].ForeColor = IntToColor(0xF98906);
-            ScintillaNet.Styles[ScintillaNET.Style.Python.ClassName].ForeColor = IntToColor(0xB3D991);
-            ScintillaNet.Styles[ScintillaNET.Style.Python.Character].ForeColor = IntToColor(0xFF0000);
-            ScintillaNet.Styles[ScintillaNET.Style.Python.Triple].ForeColor = IntToColor(0x48A8EE);
-            ScintillaNet.Styles[ScintillaNET.Style.LineNumber].BackColor = IntToColor(BACK_COLOR);
-            ScintillaNet.Styles[ScintillaNET.Style.LineNumber].ForeColor = IntToColor(FORE_COLOR);
-            ScintillaNet.Styles[ScintillaNET.Style.IndentGuide].ForeColor = IntToColor(FORE_COLOR);
-            ScintillaNet.Styles[ScintillaNET.Style.IndentGuide].BackColor = IntToColor(BACK_COLOR);
+            //ScintillaNet.Styles[ScintillaNET.Style.Python.Identifier].ForeColor = IntToColor(0xD0DAE2);
+            //ScintillaNet.Styles[ScintillaNET.Style.Python.CommentBlock].ForeColor = IntToColor(0xBD758B);
+            //ScintillaNet.Styles[ScintillaNET.Style.Python.CommentLine].ForeColor = IntToColor(0x40BF57);
+            //ScintillaNet.Styles[ScintillaNET.Style.Python.CommentBlock].ForeColor = IntToColor(0x2FAE35);
+            //ScintillaNet.Styles[ScintillaNET.Style.Python.Number].ForeColor = IntToColor(0xFFFF00);
+            //ScintillaNet.Styles[ScintillaNET.Style.Python.String].ForeColor = IntToColor(0xFFFF00);
+            //ScintillaNet.Styles[ScintillaNET.Style.Python.Character].ForeColor = IntToColor(0xE95454);
+            //ScintillaNet.Styles[ScintillaNET.Style.Python.Operator].ForeColor = IntToColor(0xE0E0E0);
+            //ScintillaNet.Styles[ScintillaNET.Style.Python.Word].ForeColor = IntToColor(0x48A8EE);
+            //ScintillaNet.Styles[ScintillaNET.Style.Python.Word2].ForeColor = IntToColor(0xF98906);
+            //ScintillaNet.Styles[ScintillaNET.Style.Python.ClassName].ForeColor = IntToColor(0xB3D991);
+            //ScintillaNet.Styles[ScintillaNET.Style.Python.Character].ForeColor = IntToColor(0xFF0000);
+            //ScintillaNet.Styles[ScintillaNET.Style.Python.Triple].ForeColor = IntToColor(0x48A8EE);
+            //ScintillaNet.Styles[ScintillaNET.Style.LineNumber].BackColor = IntToColor(BACK_COLOR);
+            //ScintillaNet.Styles[ScintillaNET.Style.LineNumber].ForeColor = IntToColor(FORE_COLOR);
+            //ScintillaNet.Styles[ScintillaNET.Style.IndentGuide].ForeColor = IntToColor(FORE_COLOR);
+            //ScintillaNet.Styles[ScintillaNET.Style.IndentGuide].BackColor = IntToColor(BACK_COLOR);
+            //ScintillaNet.Lexer = Lexer.Cpp;
 
-
-            ScintillaNet.Lexer = Lexer.Cpp;
-
+            ScintillaNet.SetWhitespaceForeColor(true, System.Windows.Media.Color.FromRgb(0, 0, 0));
             ScintillaNet.SetKeywords(0, "class extends implements import interface new case do while else if for in switch throw get set function var try catch finally while with default break continue delete return each const namespace package include use is as instanceof typeof author copy default deprecated eventType example exampleText exception haxe inheritDoc internal link mtasc mxmlc param private return see serial serialData serialField since throws usage version langversion playerversion productversion dynamic private public partial static intrinsic internal native override protected AS3 final super this arguments null Infinity NaN undefined true false abstract as base bool break by byte case catch char checked class const continue decimal default delegate do double descending explicit event extern else enum false finally fixed float for foreach from goto group if implicit in int interface internal into is lock long new null namespace object operator out override orderby params private protected public readonly ref return switch struct sbyte sealed short sizeof stackalloc static string select this throw true try typeof uint ulong unchecked unsafe ushort using var virtual volatile void while where yield");
             ScintillaNet.SetKeywords(1, "void Null ArgumentError arguments Array Boolean Class Date DefinitionError Error EvalError Function int Math Namespace Number Object RangeError ReferenceError RegExp SecurityError String SyntaxError TypeError uint XML XMLList Boolean Byte Char DateTime Decimal Double Int16 Int32 Int64 IntPtr SByte Single UInt16 UInt32 UInt64 UIntPtr Void Path File System Windows Forms ScintillaNET");
         }
