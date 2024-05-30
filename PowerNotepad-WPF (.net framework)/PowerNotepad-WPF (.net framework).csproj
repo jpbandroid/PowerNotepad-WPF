@@ -64,6 +64,9 @@
     <Reference Include="Fluent, Version=10.0.0.0, Culture=neutral, PublicKeyToken=3e436e32a8c5546f, processorArchitecture=MSIL">
       <HintPath>..\packages\Fluent.Ribbon.10.1.0\lib\net462\Fluent.dll</HintPath>
     </Reference>
+    <Reference Include="iNKORE.UI.WPF, Version=1.2.5.0, Culture=neutral, PublicKeyToken=cd19e634b9706635, processorArchitecture=MSIL">
+      <HintPath>..\packages\iNKORE.UI.WPF.1.2.5\lib\net452\iNKORE.UI.WPF.dll</HintPath>
+    </Reference>
     <Reference Include="iNKORE.UI.WPF.Modern, Version=0.9.29.0, Culture=neutral, PublicKeyToken=cd19e634b9706635, processorArchitecture=MSIL">
       <HintPath>..\packages\iNKORE.UI.WPF.Modern.0.9.29\lib\net452\iNKORE.UI.WPF.Modern.dll</HintPath>
     </Reference>
