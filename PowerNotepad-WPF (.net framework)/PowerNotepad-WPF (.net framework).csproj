@@ -58,17 +58,17 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoUpdater.NET, Version=1.8.6.0, Culture=neutral, PublicKeyToken=501435c91b35f4bc, processorArchitecture=MSIL">
-      <HintPath>..\packages\Autoupdater.NET.Official.1.8.6\lib\net45\AutoUpdater.NET.dll</HintPath>
+    <Reference Include="AutoUpdater.NET, Version=1.9.1.0, Culture=neutral, PublicKeyToken=501435c91b35f4bc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autoupdater.NET.Official.1.9.1\lib\net462\AutoUpdater.NET.dll</HintPath>
     </Reference>
     <Reference Include="ControlzEx, Version=7.0.0.0, Culture=neutral, PublicKeyToken=69f1c32f803d307e, processorArchitecture=MSIL">
       <HintPath>..\packages\ControlzEx.7.0.0-alpha0106\lib\net462\ControlzEx.dll</HintPath>
     </Reference>
-    <Reference Include="Fluent, Version=10.0.0.0, Culture=neutral, PublicKeyToken=3e436e32a8c5546f, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fluent.Ribbon.10.1.0\lib\net462\Fluent.dll</HintPath>
+    <Reference Include="Fluent, Version=11.0.0.0, Culture=neutral, PublicKeyToken=3e436e32a8c5546f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fluent.Ribbon.11.0.0-alpha0235\lib\net462\Fluent.dll</HintPath>
     </Reference>
-    <Reference Include="iNKORE.UI.WPF, Version=1.2.5.0, Culture=neutral, PublicKeyToken=cd19e634b9706635, processorArchitecture=MSIL">
-      <HintPath>..\packages\iNKORE.UI.WPF.1.2.5\lib\net452\iNKORE.UI.WPF.dll</HintPath>
+    <Reference Include="iNKORE.UI.WPF, Version=1.2.6.0, Culture=neutral, PublicKeyToken=cd19e634b9706635, processorArchitecture=MSIL">
+      <HintPath>..\packages\iNKORE.UI.WPF.1.2.6\lib\net452\iNKORE.UI.WPF.dll</HintPath>
     </Reference>
     <Reference Include="iNKORE.UI.WPF.Modern, Version=0.9.29.0, Culture=neutral, PublicKeyToken=cd19e634b9706635, processorArchitecture=MSIL">
       <HintPath>..\packages\iNKORE.UI.WPF.Modern.0.9.29\lib\net452\iNKORE.UI.WPF.Modern.dll</HintPath>
@@ -76,17 +76,17 @@
     <Reference Include="iNKORE.UI.WPF.Modern.Controls, Version=0.9.29.0, Culture=neutral, PublicKeyToken=cd19e634b9706635, processorArchitecture=MSIL">
       <HintPath>..\packages\iNKORE.UI.WPF.Modern.0.9.29\lib\net452\iNKORE.UI.WPF.Modern.Controls.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.2584.0, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.2584-prerelease\lib\net462\Microsoft.Web.WebView2.Core.dll</HintPath>
+    <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.2646.0, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.2646-prerelease\lib\net462\Microsoft.Web.WebView2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.2584.0, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.2584-prerelease\lib\net462\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+    <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.2646.0, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.2646-prerelease\lib\net462\Microsoft.Web.WebView2.WinForms.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.2584.0, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.2584-prerelease\lib\net462\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.2646.0, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.2646-prerelease\lib\net462\Microsoft.Web.WebView2.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.77\lib\net462\Microsoft.Xaml.Behaviors.dll</HintPath>
+      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.122\lib\net462\Microsoft.Xaml.Behaviors.dll</HintPath>
     </Reference>
     <Reference Include="netstandard" />
     <Reference Include="ScintillaNET, Version=4.2.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -96,9 +96,22 @@
       <HintPath>..\packages\fernandreu.ScintillaNET.WPF.3.1.0\lib\net471\ScintillaNET.WPF.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -203,11 +216,11 @@
     </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\packages\Microsoft.Web.WebView2.1.0.2584-prerelease\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.2584-prerelease\build\Microsoft.Web.WebView2.targets')" />
+  <Import Project="..\packages\Microsoft.Web.WebView2.1.0.2646-prerelease\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.2646-prerelease\build\Microsoft.Web.WebView2.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.Web.WebView2.1.0.2584-prerelease\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Web.WebView2.1.0.2584-prerelease\build\Microsoft.Web.WebView2.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Web.WebView2.1.0.2646-prerelease\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Web.WebView2.1.0.2646-prerelease\build\Microsoft.Web.WebView2.targets'))" />
   </Target>
 </Project>
